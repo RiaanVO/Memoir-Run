@@ -1,8 +1,35 @@
 # =============== #
 # Unity generated #
 # =============== #
-Assignment5/Temp/
-Assignment5/Obj/
-Assignment5/UnityGenerated/
-Assignment5/Library/
-Assignment5/Build/
+Temp/
+Obj/
+UnityGenerated/
+Library/
+Build/
+
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
