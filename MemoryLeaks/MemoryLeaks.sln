@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C86418BB-0CED-2304-5601-7C6FE6B64AA9}") = "MemoryLeaks", "Assembly-CSharp.csproj", "{C8950A9F-1564-08EB-13CA-0DD3DDA3A2CB}"
+EndProject
+Project("{C86418BB-0CED-2304-5601-7C6FE6B64AA9}") = "MemoryLeaks", "Assembly-CSharp-Editor.csproj", "{F69171ED-41ED-E6A8-525C-B085589B6256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8950A9F-1564-08EB-13CA-0DD3DDA3A2CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8950A9F-1564-08EB-13CA-0DD3DDA3A2CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8950A9F-1564-08EB-13CA-0DD3DDA3A2CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8950A9F-1564-08EB-13CA-0DD3DDA3A2CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69171ED-41ED-E6A8-525C-B085589B6256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69171ED-41ED-E6A8-525C-B085589B6256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69171ED-41ED-E6A8-525C-B085589B6256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69171ED-41ED-E6A8-525C-B085589B6256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

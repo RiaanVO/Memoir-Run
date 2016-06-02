@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: 17ecd8cbcebe24b53ad0e4dcfe5789ec
+timeCreated: 1464664081
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RedEnemyIdle_0
+    21300002: WhiteEnemyIdle_0
+    21300004: WhiteEnemyIdle_1
+    21300006: WhiteEnemyWalk_0
+    21300008: WhiteEnemyWalk_1
+    21300010: WhiteEnemyAttack_0
+    21300012: WhiteEnemyAttack_1
+    21300014: WhiteEnemyAttack_2
+    21300016: BlueEnemyIdle_0
+    21300018: BlueEnemyIdle_1
+    21300020: BlueEnemyWalk_0
+    21300022: BlueEnemyWalk_1
+    21300024: BlueEnemyAttack_0
+    21300026: BlueEnemyAttack_1
+    21300028: BlueEnemyAttack_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 48
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: WhiteEnemyIdle_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 32}
+    - name: WhiteEnemyIdle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 32}
+        - {x: -16, y: 28}
+        - {x: -16, y: -30}
+        - {x: -15, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 25}
+        - {x: 14, y: 32}
+    - name: WhiteEnemyWalk_0
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 8, y: 32}
+        - {x: -8, y: 32}
+        - {x: -13, y: 29}
+        - {x: -15, y: 5}
+        - {x: -15, y: -30}
+        - {x: -12, y: -32}
+        - {x: 9, y: -32}
+        - {x: 14, y: -27}
+        - {x: 14, y: 25}
+        - {x: 9, y: 31}
+    - name: WhiteEnemyWalk_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 128
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 32}
+        - {x: -14, y: 23}
+        - {x: -14, y: -32}
+        - {x: 14, y: -32}
+        - {x: 15, y: -26}
+        - {x: 15, y: 30}
+        - {x: 10, y: 32}
+    - name: WhiteEnemyAttack_0
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.80000305, y: 32}
+        - {x: -8.199997, y: 32}
+        - {x: -16.199997, y: 17}
+        - {x: -16.199997, y: -32}
+        - {x: 9.800003, y: -32}
+        - {x: 18.800003, y: -28}
+        - {x: 30.800003, y: -8}
+        - {x: 30.800003, y: 6}
+        - {x: 7.800003, y: 30}
+    - name: WhiteEnemyAttack_1
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 4.799988, y: 32}
+        - {x: -15.200012, y: 32}
+        - {x: -16.200012, y: 31}
+        - {x: -16.200012, y: -31}
+        - {x: -13.200012, y: -32}
+        - {x: 15.799988, y: -32}
+        - {x: 30.799988, y: -9}
+        - {x: 30.799988, y: 10}
+        - {x: 15.799988, y: 29}
+    - name: WhiteEnemyAttack_2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 128
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10.799988, y: 30}
+        - {x: 6.799988, y: 32}
+        - {x: -19.200012, y: 32}
+        - {x: -19.200012, y: -32}
+        - {x: 16.799988, y: -32}
+        - {x: 32.799988, y: -6}
+        - {x: 32.799988, y: 7}
+        - {x: 30.799988, y: 9}
+    - name: BlueEnemyIdle_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 34
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 30}
+        - {x: 13, y: 32}
+    - name: BlueEnemyIdle_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 34
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12, y: 32}
+        - {x: -14, y: 32}
+        - {x: -16, y: 31}
+        - {x: -16, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 12}
+        - {x: 14, y: 31}
+    - name: BlueEnemyWalk_0
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 34
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 32}
+        - {x: -14, y: -32}
+        - {x: 15, y: -32}
+        - {x: 15, y: 32}
+    - name: BlueEnemyWalk_1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 34
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10, y: 32}
+        - {x: -14, y: 20}
+        - {x: -14, y: -28}
+        - {x: -9, y: -32}
+        - {x: 11, y: -32}
+        - {x: 15, y: -26}
+        - {x: 15, y: 29}
+        - {x: 8, y: 32}
+    - name: BlueEnemyAttack_0
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 34
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.199997, y: 31}
+        - {x: -12.199997, y: 29}
+        - {x: -17.199997, y: 21}
+        - {x: -17.199997, y: -32}
+        - {x: 9.800003, y: -32}
+        - {x: 29.800003, y: -11}
+        - {x: 29.800003, y: 18}
+        - {x: 19.800003, y: 31}
+    - name: BlueEnemyAttack_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 34
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.200012, y: 32}
+        - {x: -13.200012, y: 31}
+        - {x: -17.200012, y: 3}
+        - {x: -17.200012, y: -28}
+        - {x: -12.200012, y: -32}
+        - {x: 8.799988, y: -32}
+        - {x: 29.799988, y: -14}
+        - {x: 29.799988, y: 17}
+        - {x: 15.799988, y: 32}
+    - name: BlueEnemyAttack_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 34
+        width: 64
+        height: 64
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19.200012, y: 32}
+        - {x: -19.200012, y: -32}
+        - {x: 16.799988, y: -32}
+        - {x: 31.799988, y: -6}
+        - {x: 31.799988, y: 16}
+        - {x: 8.799988, y: 32}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
