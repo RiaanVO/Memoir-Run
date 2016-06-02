@@ -152,11 +152,16 @@ public class PlayerController : MonoBehaviour {
 		GetComponent<HealthManager> ().fullHealth ();
 	}
 
-	/*
-	void OnTriggerEnter2D(Collider2D other){
-		if (other.tag == "Enemy" && !grounded && !other.GetComponent<EnemyHealthManager>().isDead) {
-			other.GetComponent<EnemyHealthManager> ().giveDamage (jumpDamageToGive);
-			jump ();
+
+	void OnCollisionEnter2D(Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = other.transform;
 		}
-	} */
+	}
+
+	void OnCollisionExit2D(Collision2D other){
+		if (other.transform.tag == "MovingPlatform") {
+			transform.parent = null;
+		}
+	}
 }

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 95694865a05644716a91b92e7694f24d
-timeCreated: 1464834778
+timeCreated: 1464878244
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,10 @@ TextureImporter:
     21300004: Box
     21300006: BoxDestruct
     21300008: Extra
+    21300010: BreakingPlatform_0
+    21300012: BreakingPlatform_1
+    21300014: BreakingPlatform_2
+    21300016: BreakingPlatform_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -119,6 +123,50 @@ TextureImporter:
         - {x: 12, y: -12}
         - {x: 12, y: 11}
         - {x: 10, y: 13}
+    - name: BreakingPlatform_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BreakingPlatform_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 153
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BreakingPlatform_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 148
+        width: 32
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.57573545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: BreakingPlatform_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 142
+        width: 27
+        height: 23
+      alignment: 9
+      pivot: {x: 0.5000003, y: 0.6372024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
