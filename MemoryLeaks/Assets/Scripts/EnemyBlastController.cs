@@ -15,6 +15,11 @@ public class EnemyBlastController : MonoBehaviour {
 
 	private Vector2 targetDirection;
 
+	//public AudioClip ExplosionSound;
+	public AudioSource explosionSource;
+	private bool removeGameObject = false;
+
+
 	void Start () {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
@@ -29,6 +34,10 @@ public class EnemyBlastController : MonoBehaviour {
 
 	// Use this for initialization
 	void Update () {
+		if (removeGameObject && !explosionSource.isPlaying) {
+			Destroy (gameObject);
+		}
+
 		if (exploded)
 			return;
 		if (lifeTime < 0) {
@@ -44,14 +53,20 @@ public class EnemyBlastController : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D other){
 		if (other.tag == "Enemy")
 			return;
+		
 		rb2d.velocity = new Vector3(0,0,0);
 		anim.SetTrigger ("Explode");
 
 		if (other.name == "Player" && !exploded) {
-			HealthManager.HurtPlayer (damageToGive);
-			//Destroy (other.gameObject);
+			other.GetComponent<HealthManager>().HurtPlayer (damageToGive);
 		}
+		GetComponent<CircleCollider2D> ().enabled = false;
 		exploded = true;
+	}
+
+	public void playExplosionSound(){
+		//AudioSource.PlayClipAtPoint (ExplosionSound, transform.position);
+		explosionSource.Play ();
 	}
 
 	public void removeBlast(){

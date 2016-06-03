@@ -19,6 +19,10 @@ public class MemoryPickup : MonoBehaviour {
 	private Rigidbody2D rb2d;
 
 
+	private bool removeGameObject = false;
+	//public AudioClip memoryCollectSound;
+	public AudioSource memoryCollectSource;
+	public CircleCollider2D collisionCollider;
 
 
 	// Use this for initialization
@@ -34,13 +38,20 @@ public class MemoryPickup : MonoBehaviour {
 	void Update () {
 		onGround = Physics2D.OverlapCircle (transform.position, groundCheckRadius);
 		anim.SetBool ("onGround", onGround);
+
+		if (removeGameObject && !memoryCollectSource.isPlaying) {
+			Destroy (gameObject);
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.name == "Player") {
-			//ScoreManager.AddPoints (memoriesToAdd);
-			HealthManager.HurtPlayer(-memoriesToAdd);
-			Destroy (gameObject);
+		if (other.name == "Player" && !removeGameObject) {
+			memoryCollectSource.Play();
+			GetComponent<SpriteRenderer> ().enabled = false;
+			collisionCollider.enabled = false;
+
+			other.GetComponent<HealthManager>().HealPlayer(memoriesToAdd);
+			removeGameObject = true;
 		}
 
 		if (other.tag == "Hazzard")

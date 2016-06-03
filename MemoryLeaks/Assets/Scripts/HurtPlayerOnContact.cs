@@ -38,7 +38,7 @@ public class HurtPlayerOnContact : MonoBehaviour {
 			}
 
 			other.GetComponent<PlayerController> ().applyKnockback (new Vector2(direction * xKnockbackAmount, yKnockbackAmount), knockbackDuration);
-			HealthManager.HurtPlayer (damageToGive);
+			other.GetComponent<HealthManager>().HurtPlayer (damageToGive);
 		}
 	}
 }

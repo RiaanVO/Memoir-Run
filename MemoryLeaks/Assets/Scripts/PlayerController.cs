@@ -35,6 +35,12 @@ public class PlayerController : MonoBehaviour {
 	public bool canShoot;
 	public bool canPunch;
 
+	//Sound fields
+	//public AudioClip jumpSound;
+	//public AudioClip punchSound;
+
+	public AudioSource jumpAudioSource;
+	public AudioSource punchAudioSource;
 
 	// Use this for initialization
 	void Start () {
@@ -44,8 +50,6 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate(){
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, whatIsGround);
-		Debug.DrawLine (transform.position, groundCheck.position);
-		//Debug.Log (grounded);
 	}
 
 	// Update is called once per frame
@@ -65,6 +69,8 @@ public class PlayerController : MonoBehaviour {
 	private void checkPunch(){
 		if (Input.GetButtonDown ("Fire2")) {
 			anim.SetTrigger ("Punch");
+			punchAudioSource.Play ();
+			//AudioSource.PlayClipAtPoint(punchSound, transform.position);
 		}
 	}
 
@@ -86,7 +92,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void fireMemoryBlast(){
-		HealthManager.HurtPlayer (playerDamageOnShot);
+		GetComponent<HealthManager>().HurtPlayer (playerDamageOnShot);
 		Instantiate (memoryBlast, firePoint.position, firePoint.rotation);
 	}
 
@@ -126,6 +132,8 @@ public class PlayerController : MonoBehaviour {
 	public void jump(){
 		anim.SetTrigger ("Jump");
 		rb2d.velocity = new Vector2 (rb2d.velocity.x, jumpHeight);
+		jumpAudioSource.Play ();
+		//AudioSource.PlayClipAtPoint(jumpSound, transform.position);
 	}
 
 	private void checkFlip(){

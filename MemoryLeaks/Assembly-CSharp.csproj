@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\BlueEnemyController.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
      <Compile Include="Assets\Scripts\BreakingPlatformController.cs" />
+     <Compile Include="Assets\Scripts\ButtonAudioController.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\DestroyFinishedParticle.cs" />

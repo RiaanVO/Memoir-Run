@@ -12,7 +12,9 @@ public class MemoryBlastController : MonoBehaviour {
 	private PlayerController player;
 	private bool exploded = false;
 
+	private bool removeGameObject = false;
 
+	public AudioSource explodeSource;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +28,10 @@ public class MemoryBlastController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (removeGameObject && !explodeSource.isPlaying) {
+			Destroy (gameObject);
+		}
+
 		if (exploded)
 			return;
 		if (lifeTime < 0) {
@@ -36,6 +42,7 @@ public class MemoryBlastController : MonoBehaviour {
 		}
 		lifeTime -= Time.deltaTime;
 		rb2d.velocity = new Vector2 (moveSpeed, rb2d.velocity.y);
+
 	}
 
 	void OnTriggerEnter2D (Collider2D other){
@@ -49,7 +56,12 @@ public class MemoryBlastController : MonoBehaviour {
 		exploded = true;
 	}
 
+	public void playExplosionSound(){
+		explodeSource.Play ();
+	}
+
 	public void removeBlast(){
-		Destroy (gameObject);
+		removeGameObject = true;
+		//Destroy (gameObject);
 	}
 }

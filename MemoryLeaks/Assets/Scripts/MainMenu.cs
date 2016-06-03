@@ -33,6 +33,8 @@ public class MainMenu : MonoBehaviour {
 	//===================================================================
 
 
+	public AudioClip selectSound;
+
 	// Use this for initialization
 	void Start () {
 		PlayerPrefs.SetInt ("PlayerMaxHealth", playerMaxHealth);
@@ -56,6 +58,7 @@ public class MainMenu : MonoBehaviour {
 			canDoubleJump = 1;
 			canPunch = 1;
 			canShoot = 1;
+			PlayerPrefs.SetString ("CurrentLevel", "Level_1");
 
 		} else if (Input.GetKeyDown (KeyCode.P)) {
 			Debug.Log ("Thank you for not cheating");
@@ -85,18 +88,26 @@ public class MainMenu : MonoBehaviour {
 		PlayerPrefs.SetInt ("CanPunch", canPunch);
 		PlayerPrefs.SetInt ("CanShoot", canShoot);
 
+		AudioSource.PlayClipAtPoint (selectSound, transform.position);
 		SceneManager.LoadScene (PlayerPrefs.GetString("CurrentLevel"));
 	}
 
 	public void ContinueGame(){
+		AudioSource.PlayClipAtPoint (selectSound, transform.position);
+
 		SceneManager.LoadScene (PlayerPrefs.GetString("CurrentLevel"));
 	}
 
 	public void LevelSelect(){
+		AudioSource.PlayClipAtPoint (selectSound, transform.position);
+
 		SceneManager.LoadScene (levelSelect);
 	}
 
 	public void QuitGame(){
+		AudioSource.PlayClipAtPoint (selectSound, transform.position);
+
 		Application.Quit ();
 	}
+		
 }

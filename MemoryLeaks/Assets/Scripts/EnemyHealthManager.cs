@@ -13,6 +13,9 @@ public class EnemyHealthManager : MonoBehaviour {
 	public bool isDead = false;
 	private Animator anim;
 
+	//public AudioClip HurtEnemy;
+	public AudioSource hurtEnemyAudioSource;
+
 	// Use this for initialization
 	void Start () {
 		if (hasAnimation)
@@ -41,6 +44,9 @@ public class EnemyHealthManager : MonoBehaviour {
 
 	public void giveDamage(int damageToGive){
 		enemyHealth -= damageToGive;
+		if(enemyHealth >= 0)
+			hurtEnemyAudioSource.Play ();
+		//AudioSource.PlayClipAtPoint (HurtEnemy, transform.position);
 	}
 
 	public bool getIsDead(){

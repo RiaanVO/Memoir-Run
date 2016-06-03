@@ -13,6 +13,9 @@ public class HealthManager : MonoBehaviour {
 
 	private LevelManager levelManager;
 
+	//public AudioClip hurtPlayer;
+	public AudioSource hurtPlayerAudioSource;
+
 	// Use this for initialization
 	void Start () {
 		levelManager = FindObjectOfType<LevelManager> ();
@@ -36,8 +39,14 @@ public class HealthManager : MonoBehaviour {
 		healthBar.value = playerHealth;
 	}
 
-	public static void HurtPlayer(int damageToGive){
+	public void HurtPlayer(int damageToGive){
 		playerHealth -= damageToGive;
+		hurtPlayerAudioSource.Play ();
+		//AudioSource.PlayClipAtPoint (hurtPlayer, transform.position);
+	}
+
+	public void HealPlayer(int healAmount){
+		playerHealth += healAmount;
 	}
 
 	public void fullHealth(){

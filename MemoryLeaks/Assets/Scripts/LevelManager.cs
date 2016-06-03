@@ -13,11 +13,7 @@ public class LevelManager : MonoBehaviour {
 
 	public float respawnDelay;
 
-	public int pointPenaltyOnDeath;
-
 	private float gravityStore;
-
-	//private HealthManager healthManager;
 
 	// Use this for initialization
 	void Start () {

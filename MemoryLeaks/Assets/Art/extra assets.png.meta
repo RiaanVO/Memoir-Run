@@ -1,11 +1,11 @@
 fileFormatVersion: 2
 guid: 95694865a05644716a91b92e7694f24d
-timeCreated: 1464878244
+timeCreated: 1464921298
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Door
-    21300002: Lamp
+    21300002: CheckpointOn
     21300004: Box
     21300006: BoxDestruct
     21300008: Extra
@@ -13,6 +13,7 @@ TextureImporter:
     21300012: BreakingPlatform_1
     21300014: BreakingPlatform_2
     21300016: BreakingPlatform_3
+    21300018: CheckpointOff
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -74,7 +75,7 @@ TextureImporter:
         - {x: -16, y: -32}
         - {x: 16, y: -32}
         - {x: 16, y: 32}
-    - name: Lamp
+    - name: CheckpointOn
       rect:
         serializedVersion: 2
         x: 2
@@ -165,6 +166,17 @@ TextureImporter:
         height: 23
       alignment: 9
       pivot: {x: 0.5000003, y: 0.6372024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: CheckpointOff
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 62
+        width: 28
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
     outline: []

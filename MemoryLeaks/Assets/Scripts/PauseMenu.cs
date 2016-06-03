@@ -11,8 +11,15 @@ public class PauseMenu : MonoBehaviour {
 	public GameObject pauseMenuCanvas;
 	private PlayerController player;
 
+	public AudioSource menuSelectAudioSource;
+
+
+	private bool changeScene = false;
+	private string nextScene = "";
 	void Start(){
 		player = FindObjectOfType<PlayerController> ();
+		changeScene = false;
+		isPaused = false;
 	}
 
 	// Update is called once per frame
@@ -28,21 +35,30 @@ public class PauseMenu : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			isPaused = !isPaused;
 		}
+
+		if (changeScene && !menuSelectAudioSource.isPlaying) {
+			Time.timeScale = 1;
+			isPaused = false;
+			SceneManager.LoadScene (nextScene);
+		}
 	}
 
 	public void Resume(){
 		isPaused = false;
+		menuSelectAudioSource.Play ();
 	}
 
 	public void LevelSelect(){
-		Time.timeScale = 1;
-		isPaused = false;
-		SceneManager.LoadScene (levelSelect);
+		menuSelectAudioSource.Play ();
+		nextScene = levelSelect;
+		changeScene = true;
+		//SceneManager.LoadScene (levelSelect);
 	}
 
 	public void MainMenu(){
-		Time.timeScale = 1;
-		isPaused = false;
-		SceneManager.LoadScene (mainMenu);
+		menuSelectAudioSource.Play ();
+		nextScene = mainMenu;
+		changeScene = true;
+		//SceneManager.LoadScene (mainMenu);
 	}
 }

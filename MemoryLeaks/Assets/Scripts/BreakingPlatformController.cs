@@ -16,7 +16,11 @@ public class BreakingPlatformController : MonoBehaviour {
 	private BoxCollider2D bc2d;
 	private SpriteRenderer spriteRenderer;
 
+	public AudioSource breakAudioSource;
+	public AudioSource reappearAudioSource;
+	public AudioSource crackAudioSource;
 
+	private bool isVisible = false;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +43,8 @@ public class BreakingPlatformController : MonoBehaviour {
 				if (!broken) {
 					broken = true;
 					anim.SetTrigger("Break");
+					if(isVisible)
+						breakAudioSource.Play ();
 				}
 
 				if (reapearDelayCounter > 0) {
@@ -50,6 +56,8 @@ public class BreakingPlatformController : MonoBehaviour {
 					breaking = false;
 					spriteRenderer.enabled = true;
 					bc2d.enabled = true;
+					if(isVisible)
+						reappearAudioSource.Play ();
 				}
 			}
 		}
@@ -58,15 +66,26 @@ public class BreakingPlatformController : MonoBehaviour {
 	public void hidePlatform(){
 		spriteRenderer.enabled = false;
 		bc2d.enabled = false;
-	}
+	}	
 
 	void OnCollisionEnter2D(Collision2D other){
-		if (other.transform.name == "Player" && !breaking) {
+		if ((other.transform.name == "Player") && !breaking) {
 			playerTouched = true;
 			breaking = true;
 			anim.SetTrigger ("Crack");
 			breakDelayCounter = breakDelay;
 			reapearDelayCounter = reapearDelay;
+			crackAudioSource.Play ();
 		}
+	}
+
+	void OnBecameInvisible(){
+		Debug.Log ("Now invisible");
+		isVisible = false;
+	}
+
+	void OnBecameVisible(){
+		Debug.Log ("Now visible");
+		isVisible = true;
 	}
 }
