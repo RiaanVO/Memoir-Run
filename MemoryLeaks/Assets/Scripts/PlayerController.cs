@@ -8,7 +8,8 @@ public class PlayerController : MonoBehaviour {
 	public float jumpHeight;
 	private bool doubleJumped = false;
 
-	public Transform groundCheck;
+	public Transform groundCheck1;
+	public Transform groundCheck2;
 	public LayerMask whatIsGround;
 	private bool grounded = false;
 
@@ -46,10 +47,20 @@ public class PlayerController : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
+
+		canDoubleJump = PlayerPrefs.GetInt ("CanDoubleJump") == 1;
+		canShoot = PlayerPrefs.GetInt ("CanShoot") == 1;
+		canPunch = PlayerPrefs.GetInt ("CanPunch") == 1;
+
+		//PlayerPrefs.SetInt ("CanDoubleJump", canDoubleJump);
+		//PlayerPrefs.SetInt ("CanPunch", canPunch);
+		//PlayerPrefs.SetInt ("CanShoot", canShoot);
 	}
 
 	void FixedUpdate(){
-		grounded = Physics2D.Linecast (transform.position, groundCheck.position, whatIsGround);
+			grounded = Physics2D.Linecast (transform.position, groundCheck1.position, whatIsGround) || Physics2D.Linecast (transform.position, groundCheck2.position, whatIsGround);
+		if (grounded)
+			doubleJumped = false;
 	}
 
 	// Update is called once per frame
@@ -64,6 +75,10 @@ public class PlayerController : MonoBehaviour {
 		}
 		//anim.SetBool ("underKnockback", underKnockback);
 		checkFlip ();
+
+		canDoubleJump = PlayerPrefs.GetInt ("CanDoubleJump") == 1;
+		canShoot = PlayerPrefs.GetInt ("CanShoot") == 1;
+		canPunch = PlayerPrefs.GetInt ("CanPunch") == 1;
 	}
 
 	private void checkPunch(){
@@ -171,5 +186,9 @@ public class PlayerController : MonoBehaviour {
 		if (other.transform.tag == "MovingPlatform") {
 			transform.parent = null;
 		}
+	}
+
+	public void stopMoving(){
+		rb2d.velocity = new Vector3 (0,0,0);
 	}
 }

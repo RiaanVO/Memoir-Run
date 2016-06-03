@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour {
 
 	public bool playerInZone;
+	public int levelBehindDoor;
 	public string levelToLoad;
 
 	// Use this for initialization
@@ -14,7 +15,7 @@ public class LevelLoader : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxisRaw ("Vertical") == -1 && playerInZone) {
+		if (Input.GetAxisRaw("Vertical") == -1 && playerInZone && levelBehindDoor <= PlayerPrefs.GetInt("LevelsUnlocked")) {
 			//Application.LoadLevel (levelToLoad);
 
 			SceneManager.LoadScene(levelToLoad);

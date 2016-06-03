@@ -15,11 +15,15 @@ public class LevelManager : MonoBehaviour {
 
 	private float gravityStore;
 
+	public string currentLevel;
+
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<PlayerController> ();
 		//healthManager = FindObjectOfType<HealthManager> ();
 		cameraController = FindObjectOfType<CameraController> ();
+
+		PlayerPrefs.SetString ("CurrentLevel", currentLevel);
 	}
 	
 	// Update is called once per frame

@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AbilityUnlockController.cs" />
      <Compile Include="Assets\Scripts\BlueEnemyController.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
      <Compile Include="Assets\Scripts\BreakingPlatformController.cs" />
@@ -52,6 +53,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\Checkpoint.cs" />
      <Compile Include="Assets\Scripts\DestroyFinishedParticle.cs" />
+     <Compile Include="Assets\Scripts\DialogZoneController.cs" />
      <Compile Include="Assets\Scripts\EnemyBlastController.cs" />
      <Compile Include="Assets\Scripts\EnemyHealthManager.cs" />
      <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
@@ -68,22 +70,33 @@
      <Compile Include="Assets\Scripts\MovingPlatformController.cs" />
      <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\TextBoxManager.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\ImportBehaviour.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\SortingLayerExposed.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TileAnimator.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledInitialShaderProperties.cs" />
      <Compile Include="Assets\Tiled2Unity\Scripts\Runtime\TiledMap.cs" />
+     <None Include="Assets\Tiled2Unity\Imported\Level4v2.tiled2unity.xml" />
+     <None Include="Assets\Tiled2Unity\Imported\Level3v2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="Assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
      <None Include="Assets\Tiled2Unity\Tiled2Unity.export.txt" />
+     <None Include="Assets\Dialogue\Level5Script.txt" />
+     <None Include="Assets\Dialogue\Level3Script.txt" />
      <None Include="Assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="Assets\Tiled2Unity\Imported\Test.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\Level_1.tiled2unity.xml" />
+     <None Include="Assets\Dialogue\Level4Script.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\Level_1v2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Shaders\shaColorKey.shader" />
+     <None Include="Assets\Dialogue\Level2Script.txt" />
+     <None Include="Assets\Dialogue\Level1Script.txt" />
      <None Include="Assets\Tiled2Unity\License.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\Level_2.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Imported\_ReadMe.txt" />
+     <None Include="Assets\Tiled2Unity\Imported\Level5v1.tiled2unity.xml" />
      <None Include="Assets\Tiled2Unity\Meshes\_ReadMe.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

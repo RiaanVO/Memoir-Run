@@ -80,12 +80,10 @@ public class BreakingPlatformController : MonoBehaviour {
 	}
 
 	void OnBecameInvisible(){
-		Debug.Log ("Now invisible");
 		isVisible = false;
 	}
 
 	void OnBecameVisible(){
-		Debug.Log ("Now visible");
 		isVisible = true;
 	}
 }
