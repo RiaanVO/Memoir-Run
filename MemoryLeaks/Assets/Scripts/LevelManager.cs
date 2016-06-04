@@ -24,6 +24,23 @@ public class LevelManager : MonoBehaviour {
 		cameraController = FindObjectOfType<CameraController> ();
 
 		PlayerPrefs.SetString ("CurrentLevel", currentLevel);
+
+		Debug.Log ("CurrentLevel:   " + PlayerPrefs.GetString("CurrentLevel"));
+		Debug.Log ("LevelsUnlocked:   " + PlayerPrefs.GetInt("LevelsUnlocked"));
+
+		Debug.Log ("CanDoubleJump:   " + PlayerPrefs.GetInt("CanDoubleJump"));
+		Debug.Log ("CanPunch:   " + PlayerPrefs.GetInt("CanPunch"));
+		Debug.Log ("CanShoot:   " + PlayerPrefs.GetInt("CanShoot"));
+		Debug.Log ("");
+
+		//PlayerPrefs.SetInt ("PlayerCurrentHealth", playerHealth);
+		//PlayerPrefs.SetInt ("PlayerCurrentLives", playerLives);
+		//PlayerPrefs.SetString ("CurrentLevel", startingLevel);
+		//PlayerPrefs.SetInt ("LevelsUnlocked", levelsUnlocked);
+
+		//PlayerPrefs.SetInt ("CanDoubleJump", canDoubleJump);
+		//PlayerPrefs.SetInt ("CanPunch", canPunch);
+		//PlayerPrefs.SetInt ("CanShoot", canShoot);
 	}
 	
 	// Update is called once per frame
@@ -40,9 +57,11 @@ public class LevelManager : MonoBehaviour {
 
 		player.enabled = false;
 		player.GetComponent<SpriteRenderer> ().enabled = false;
-		//ScoreManager.AddPoints (-pointPenaltyOnDeath);
-		cameraController.isFollowing = false;
+		gravityStore = player.GetComponent<Rigidbody2D> ().gravityScale;
+		player.GetComponent<Rigidbody2D> ().gravityScale = 0;
 		player.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
+
+		cameraController.isFollowing = false;
 
 		yield return new WaitForSeconds (respawnDelay);
 
@@ -53,6 +72,7 @@ public class LevelManager : MonoBehaviour {
 		cameraController.isFollowing = true;
 		player.enabled = true;
 		player.GetComponent<SpriteRenderer> ().enabled = true;
+		player.GetComponent<Rigidbody2D> ().gravityScale = gravityStore;
 		player.respawnPlayer ();
 	}
 }

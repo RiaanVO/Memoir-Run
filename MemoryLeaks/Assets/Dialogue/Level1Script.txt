@@ -21,3 +21,6 @@ Well then, on to the next weird place I guess.
 To go through doors or exits press the down arrow or s.
 
 To re-open dialogue boxes, press the down arrow or s in the right location.
+
+Well that jump is a bit far. Good thing I can double jump.
+Press space again while in the air to jump again.
