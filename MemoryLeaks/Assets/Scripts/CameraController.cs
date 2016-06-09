@@ -13,18 +13,33 @@ public class CameraController : MonoBehaviour {
 	public float xOffset;
 	public float yOffset;
 
+	public bool levelPreview;
+	public float levelPreviewSmooth = 7f;
+	public float previewCamSize = 15;
+	public Transform levelDemoStartTarget;
+	public Transform levelDemoEndTarget;
+
 	public float xLevelBoundaryMin = -10000;
 	public float xLevelBoundaryMax = 10000;
 	public float yLevelBoundaryMin = -10000;
 	public float yLevelBoundaryMax = 10000;
 
+	private Camera cam;
+	private float camSizeStore;
+
 	// Use this for initialization
 	void Start () {
+		cam = GetComponent<Camera> ();
+		camSizeStore = cam.orthographicSize;
 		player = FindObjectOfType<PlayerController>();
 		if (isFollowing) {
 			target = player.transform.position;
 		} else {
 			target = transform.position;
+		}
+
+		if(levelPreview){
+			transform.position = levelDemoStartTarget.position;
 		}
 	}
 
@@ -53,8 +68,22 @@ public class CameraController : MonoBehaviour {
 
 		}
 
-		if (transform.position != target) {
+
+
+		if (transform.position != target && !levelPreview) {
 			transform.position = Vector3.SmoothDamp (transform.position, target, ref velocity, smoothTime);
+		} 
+
+		if(levelPreview){
+			cam.orthographicSize = previewCamSize;
+			if (transform.position != levelDemoEndTarget.position) {
+				transform.position = Vector3.MoveTowards (transform.position, levelDemoEndTarget.position, levelPreviewSmooth * Time.deltaTime);
+			} else {
+				transform.position = levelDemoStartTarget.position;
+			}
+		}
+		if (!levelPreview) {
+			cam.orthographicSize = camSizeStore;
 		}
 
 	}

@@ -23,6 +23,8 @@ public class LevelManager : MonoBehaviour {
 		//healthManager = FindObjectOfType<HealthManager> ();
 		cameraController = FindObjectOfType<CameraController> ();
 
+		gravityStore = player.GetComponent<Rigidbody2D> ().gravityScale;
+
 		PlayerPrefs.SetString ("CurrentLevel", currentLevel);
 
 		Debug.Log ("CurrentLevel:   " + PlayerPrefs.GetString("CurrentLevel"));
@@ -57,7 +59,6 @@ public class LevelManager : MonoBehaviour {
 
 		player.enabled = false;
 		player.GetComponent<SpriteRenderer> ().enabled = false;
-		gravityStore = player.GetComponent<Rigidbody2D> ().gravityScale;
 		player.GetComponent<Rigidbody2D> ().gravityScale = 0;
 		player.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 
