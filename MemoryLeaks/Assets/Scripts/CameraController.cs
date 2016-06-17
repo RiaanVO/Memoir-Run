@@ -80,6 +80,8 @@ public class CameraController : MonoBehaviour {
 				transform.position = Vector3.MoveTowards (transform.position, levelDemoEndTarget.position, levelPreviewSmooth * Time.deltaTime);
 			} else {
 				transform.position = levelDemoStartTarget.position;
+				levelPreview = false;
+				isFollowing = true;
 			}
 		}
 		if (!levelPreview) {
